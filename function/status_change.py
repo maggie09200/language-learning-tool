@@ -9,5 +9,8 @@ def file_uploaded(file):
     else:
         return "尚未上傳檔案，請上傳檔案"
     
-def clear_result():
+def clear_input():
     return gr.update(value="")
+
+def clear_result():
+    return gr.update(value="按下提交確認是否正確")
