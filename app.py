@@ -26,6 +26,7 @@ def main():
 
             btn_submit = gr.Button("提交")
             btn_submit.click(fn=function.semantic_check, inputs= [question_text, user_input], outputs= [result])
+            btn_submit.click(fn=function.status_change.clear_result, inputs=[],outputs=[user_input])
 
             btn_next = gr.Button("下一題")
             btn_next.click(function.get_random_question, outputs=question_text)
