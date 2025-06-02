@@ -1,5 +1,6 @@
 import csv
 from data import vocab
+from data import reversed_vocab
 
 #處理用戶上傳的CSV檔案
 def set_vocab_from_csv(file):
@@ -10,6 +11,7 @@ def set_vocab_from_csv(file):
                 if len(row) == 2:
                     jp, zh = row[0].strip(), row[1].strip()
                     vocab[jp] = zh
+                    reversed_vocab[zh] = jp
         if vocab:
             return "單字表上傳成功! 點選開始練習。"
         else:

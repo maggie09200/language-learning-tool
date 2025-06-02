@@ -1,6 +1,5 @@
 import gradio as gr
 import os
-from data import vocab
     
 def file_uploaded(file):
     if file:

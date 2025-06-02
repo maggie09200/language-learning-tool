@@ -1,11 +1,12 @@
 import google.generativeai as genai
 from data import vocab
+from data import reversed_vocab
 
 #設定Gemini API
 genai.configure(api_key="AIzaSyD664dnxA_GoG-ehVt9MhNxUbM2KvIhpGQ")
 model = genai.GenerativeModel('gemini-2.0-flash')
 
-def semantic_check_zh(question, user_input):
+def semantic_check_jp_zh(question, user_input):
     correct_answer = vocab.get(question, None)
     if not correct_answer:
         return "題目錯誤"
@@ -26,8 +27,8 @@ def semantic_check_zh(question, user_input):
     else:
         return f"答錯了，正確答案是:{correct_answer}"
     
-def semantic_check_jp(question, user_input):
-    correct_answer = vocab.get(question, None)
+def semantic_check_zh_jp(question, user_input):
+    correct_answer = reversed_vocab.get(question, None)
     if not correct_answer:
         return "題目錯誤"
     
