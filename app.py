@@ -24,9 +24,10 @@ def main():
             question_text_jp = gr.Textbox(value="", label = "日文單字", interactive=False)
             user_input = gr.Textbox(label="請輸入中文意思")
             result = gr.Label(label = "結果",value="按下提交確認是否正確")
+            direction = gr.Textbox(value="Jp2zh",visible=False)
 
             btn_submit = gr.Button("提交")   #按下按鈕後顯示結果並清空輸入格
-            btn_submit.click(fn=function.semantic_check_jp_zh, inputs= [question_text_jp, user_input], outputs= [result])
+            btn_submit.click(fn=function.semantic_check_jp_zh, inputs= [question_text_jp, user_input, direction], outputs= [result])
             btn_submit.click(fn=function.status_change.clear_input, inputs=[],outputs=[user_input]) 
 
             btn_next = gr.Button("下一題")
