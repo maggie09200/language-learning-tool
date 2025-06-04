@@ -1,5 +1,4 @@
-# 語意比對式語言學習工具  
-# Semantic Matching Language Learning Tool
+# 語意比對式語言學習工具 Language Learning Tool with Semantic Matching
 
 本專案是一款以 **SQLite 資料庫** 儲存歷史練習紀錄，結合 **AI 語意比對** 技術的雙向語言學習工具。主要用於背單字練習，支援日文與中文的相互翻譯與語意比對。
  
