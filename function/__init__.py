@@ -1,5 +1,7 @@
 from .get_random_question import get_question_jp_zh
 from .get_random_question import get_question_zh_jp
+from .get_first_q import get_first_q_jp_zh
+from .get_first_q import get_first_q_zh_jp
 from .semantic_check import semantic_check_jp_zh
 from .semantic_check import semantic_check_zh_jp
 from .set_vocab_from_csv import set_vocab_from_csv
@@ -7,3 +9,5 @@ from .show_quiz import show_jp_zh_quiz
 from .show_quiz import show_zh_jp_quiz
 from .status_change import file_uploaded
 from .show_quiz_select import show_quiz_select
+from .back_to_hp import back_to_hp
+from .one_more import one_more
