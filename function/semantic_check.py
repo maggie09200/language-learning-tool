@@ -5,7 +5,7 @@ from models import get_answer_from_db, save_answer_to_db
 import data 
 
 #設定Gemini API
-genai.configure(api_key="AIzaSyD664dnxA_GoG-ehVt9MhNxUbM2KvIhpGQ")
+genai.configure(api_key="API KEY")
 model = genai.GenerativeModel('gemini-2.0-flash')
 
 #日翻中比對
